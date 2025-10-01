@@ -1,11 +1,8 @@
-# render.yaml (placed in the root of the repo)
 services:
   - type: web
-    name: backend-service
-    env: python
-    pythonVersion: "3.11"
+    name: interview-bot-backend
+    env: docker
     plan: free
-    rootDirectory: "backend"   # only use the backend folder
-    buildCommand: "pip install --upgrade pip setuptools wheel && pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"  # replace 'app:app' with your actual entry point
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     autoDeploy: true

@@ -6,3 +6,4 @@ python-multipart==0.0.6
 werkzeug==2.3.7
 pydub==0.25.1
 setuptools<81
+gunicorn==21.2.0
