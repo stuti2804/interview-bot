@@ -1,0 +1,55 @@
+**Project Outline: Job Interview Video Bot**
+
+**Overview:**
+A web application that conducts automated job interviews for specific roles, records video responses, and provides AI-powered scoring using custom rule-based NLP.
+
+**User Flow:**
+1. User opens web app
+2. Selects one role: Full Stack / AI-ML / Cloud
+3. System presents pre-defined questions one by one
+4. User records video answer (max 5 min each)
+5. After all questions completed, system shows:
+   - Individual question scores (/10)
+   - Overall interview score (/10)
+
+**Technical Architecture:**
+
+**Frontend:**
+- React.js web app
+- Video recording using browser MediaRecorder API
+- Simple UI: role selection → question display → record → results
+
+**Backend:**
+- Python (Flask/FastAPI)
+- Video processing pipeline:
+  1. Receive video file
+  2. Extract audio
+  3. Audio → Text (Whisper - free, open-source)
+  4. Text → NLP analysis (custom rule-based system)
+  5. Generate scores
+
+**NLP Scoring System (Custom Rule-Based):**
+- No external AI APIs
+- Rules analyze: technical keywords, communication quality, fluency
+- Per-question scoring + overall interview score
+- Built and trained using Google Colab (free)
+
+**Infrastructure:**
+- Free cloud hosting (Railway/Render)
+- Free database (MongoDB Atlas/PostgreSQL)
+- No authentication needed (university demo)
+
+**Key Constraint:** Minimal/no GenAI API usage, focus on custom NLP as the USP
+
+**Deliverable:** Working web app demonstrating automated interview assessment
+
+This is a university MVP project for a Job Interview Video Bot. 
+- Keep code SIMPLE and DIRECT - no over-engineering
+- No complex patterns, controllers, middleware, or abstractions
+- Direct API calls in routes, inline logic where possible
+- Focus on making it work, not industry best practices
+- Use basic folder structure, minimal files
+- No authentication, error handling can be basic
+- Comments should explain what, not how
+- Prioritize readability over optimization
+
