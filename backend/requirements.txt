@@ -5,3 +5,4 @@ moviepy==1.0.3
 python-multipart==0.0.6
 werkzeug==2.3.7
 pydub==0.25.1
+setuptools<81
