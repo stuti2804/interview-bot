@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set base URL for Flask backend
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://interview-bot-1-3ddc.onrender.com';
 
 // Add request interceptor for comprehensive debugging
 axios.interceptors.request.use(
